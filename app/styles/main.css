@@ -8,14 +8,7 @@ body {
   overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 body {
-  padding-top: 70px;
-  background-image:url('../images/chalkboard-black.jpg');
-  webkit-background-size: cover;
-    moz-background-size: cover;
-    o-background-size: cover;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/chalkboard-black.jpg',     sizingMethod='scale');
-    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/chalkboard-black.jpg', sizingMethod='scale');  
+  padding-top: 70px;  
 }
 footer {
   padding: 30px 0;
@@ -66,8 +59,35 @@ footer {
   }
 }
 
-.modal-body {
-background-image: url('/images/chalkboard-black.jpg');
+.bg-black {
+background-image:url('../images/chalkboard-black.jpg');
+  webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/chalkboard-black.jpg',     sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/chalkboard-black.jpg', sizingMethod='scale');  
+}
+
+.bg-blue {
+background-image:url('../images/chalkboard-blue.jpg');
+  webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/chalkboard-blue.jpg',     sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/chalkboard-blue.jpg', sizingMethod='scale');  
+}
+
+.bg-green {
+
+background-image:url('../images/chalkboard-green.jpg');
+  webkit-background-size: cover;
+    moz-background-size: cover;
+    o-background-size: cover;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/chalkboard-green.jpg',     sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/chalkboard-green.jpg', sizingMethod='scale');  
 }
 
 .modal-dialog
@@ -75,4 +95,9 @@ background-image: url('/images/chalkboard-black.jpg');
 	
 	width:862px;
 
+}
+
+.navbar-header + p.pull-right
+{
+  margin-top: 14px;
 }

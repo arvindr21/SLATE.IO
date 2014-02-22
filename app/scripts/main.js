@@ -29,14 +29,14 @@ function Slate ()
     if (pressed) {
         with(this.ctx)
         {
-        beginPath();
-        strokeStyle = ($("#colorPicker").spectrum("get")).toHexString();
-        lineWidth = $('#selWidth').val();
-        lineJoin = "round";
-        moveTo(this.preX, this.preY);
-        lineTo(x, y);
-        closePath();
-        stroke();
+			beginPath();
+			strokeStyle = ($("#colorPicker").spectrum("get")).toHexString();
+			lineWidth = $('#selWidth').val();
+			lineJoin = "round";
+			moveTo(this.preX, this.preY);			
+			lineTo(x, y);
+			closePath();
+			stroke();
       }
     }
     this.preX = x; this.preY = y;
@@ -71,6 +71,8 @@ this.save = function (canvas, callback) {
 } 
 
 
+if($("canvas").length > 0)
+{
 var slate = new Slate();
 $("#clear").on("click", function(){slate.clean(slate.ctx)});
 $("#save").on("click", function(){
@@ -79,8 +81,6 @@ $("#save").on("click", function(){
      $('#savedImage').modal('show')
   });  
 });
-
-
 
 
 $(document).ready(function () {
@@ -116,7 +116,14 @@ $(document).ready(function () {
 
 });
 
-/*
+
+}
+
+
+
+
+
+
 function resize() {
     var canHolder = document.getElementById("canHolder");
     var canvas = document.getElementById('slate');
@@ -133,11 +140,23 @@ function resize() {
         height = width * canvasRatio;
     }
 
-    console.log(width, height);
+    //console.log(width, height);
 
     canvas.style.width = (width -27)+ 'px';
     canvas.style.height = height + 'px';
+
 };
 
 window.addEventListener('resize', resize, false);
-resize();*/
+resize();
+
+$(function(){
+  $("#theme").on("change", function(){
+     var theme = $("#theme").val();
+     $("body,.modal-body").removeClass("bg-black").removeClass("bg-blue").removeClass("bg-green").addClass("bg-"+theme);
+
+
+  });  
+  $("body").addClass("bg-black");
+
+});
